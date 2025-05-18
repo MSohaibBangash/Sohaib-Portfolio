@@ -173,7 +173,7 @@ img {
 	left: 0;
 	z-index: var(--z-fixed);
 	background-color: var(--body-color);
-	padding-bottom: 1rem;
+	padding: 1rem 0rem;
 }
 
 .title {
@@ -237,7 +237,7 @@ img {
 	.header {
 		top: 0;
 		bottom: initial;
-		padding-bottom: 0rem;
+		padding: 0rem;
 	}
 }
 
