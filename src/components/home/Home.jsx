@@ -64,14 +64,17 @@ const Home = () => {
                 </div> */}
 
                 <div className="home_social_2 ">
-                    <a href="https://www.linkedin.com/" target="_blank" className="home_social-icon icon text-2xl">
+                    <a href="https://www.linkedin.com/in/m-sohaib-khalid-102b38228/" target="_blank" className="home_social-icon icon">
                         <i className="uil uil-linkedin-alt"></i>
                     </a>
-                    <a href="https://dribbble.com/" target="_blank" className="home_social-icon icon text-2xl">
-                        <i className="uil uil-dribbble"></i>
+                    <a href={waUrl} target="_blank" className="home_social-icon icon">
+                        <i className="uil uil-whatsapp"></i>
                     </a>
-                    <a href="https://github.com/" target="_blank" className="home_social-icon icon text-2xl">
+                    <a href="https://github.com/MSohaibBangash/" target="_blank" className="home_social-icon icon">
                         <i className="uil uil-github"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sohaibkhalid514@gmail.com.com" target="_blank" className="home_social-icon icon">
+                        <i className="uil uil-envelope"></i>
                     </a>
                 </div>
 
