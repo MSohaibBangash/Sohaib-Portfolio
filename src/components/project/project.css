@@ -1,0 +1,76 @@
+.project_container {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0px, 1fr));
+	gap: 2rem;
+}
+.project_box {
+	position: relative;
+	width: 100%;
+	height: 18.5rem;
+	overflow: hidden;
+	margin-bottom: 1.2rem;
+	/* border-top: 0.5rem solid #c685f7; */
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	border-radius: 1rem;
+}
+.project_box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.object_center {
+	object-position: center;
+}
+.object_left {
+	object-position: left;
+}
+.object_right {
+	object-position: right;
+}
+.project_box:hover .project_info {
+	opacity: 1;
+	visibility: visible;
+	transition-duration: 1s;
+	transition-property: all;
+}
+.project_box:hover img {
+	transform: scale(1.5);
+	transition-duration: 1s;
+	transition-property: all;
+}
+.project_box .project_info {
+	background-color: rgba(45, 45, 45, 0.8);
+	/* background-color: rgba(153, 38, 240, 0.75); */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+.project_box .project_info .caption {
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0px 1rem;
+}
+.caption h4 {
+	color: #fff !important;
+	margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	.project_container {
+		grid-template-columns: repeat(2, minmax(0px, 1fr));
+	}
+}
+@media screen and (min-width: 1024px) {
+	.project_container {
+		grid-template-columns: repeat(3, minmax(0px, 1fr));
+	}
+}
