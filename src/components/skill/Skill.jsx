@@ -78,7 +78,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={Typescript} alt="" srcset="" />   
                                     <h3 className="skills_name">Typescript</h3>
                                     </div>
-                                    <span className="skills_number ">60%</span>
+                                    <span className="skills_number ">70%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_typescript"></span>
@@ -114,7 +114,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={Next} alt="" srcset="" />   
                                     <h3 className="skills_name">Nextjs</h3>
                                     </div>
-                                    <span className="skills_number">60%</span>
+                                    <span className="skills_number">75%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_nextjs"></span>
