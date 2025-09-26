@@ -52,7 +52,7 @@
 
 .skills_bar,
 .skills_percentage {
-	height: 7px;
+	height: 10px;
 	border-radius: 0.25rem;
 }
 
@@ -70,19 +70,19 @@
 }
 
 .skills_css {
-	width: 80%;
+	width: 90%;
 }
 
 .skills_js {
-	width: 80%;
+	width: 90%;
 }
 
 .skills_typescript {
-	width: 70%;
+	width: 80%;
 }
 
 .skills_react {
-	width: 85%;
+	width: 90%;
 }
 
 .skills_reactredux {
@@ -94,19 +94,19 @@
 }
 
 .skills_aspnet {
-	width: 40%;
+	width: 50%;
 }
 
 .skills_node {
-	width: 60%;
+	width: 80%;
 }
 
 .skills_mongodb {
-	width: 45%;
+	width: 80%;
 }
 
 .skills_sql {
-	width: 55%;
+	width: 75%;
 }
 
 .skills_close .skills_list {

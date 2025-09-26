@@ -1,6 +1,41 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/*==================== ANIMATION ENHANCEMENTS ====================*/
+.main {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: relative;
+	z-index: 1;
+	padding-top: var(--header-height);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+	transition: all 0.3s ease;
+}
+
+
+/* Ensure sections don't cause scrollbar flicker */
+.section {
+	position: relative;
+	z-index: 2;
+}
+
+.header {
+	/* backdrop-filter: blur(4px) saturate(180%); */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.75rem 0rem;
+	z-index: var(--z-fixed);
+	background-color: var(--body-color);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
 /*==================== VARIABLES CSS ====================*/
 :root {
 	--header-height: 3rem;
@@ -82,6 +117,13 @@ body.dark-theme {
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
+/* Dark theme header styles */
+body.dark-theme .header {
+	background-color: var(--body-color);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
 /*========== Button Dark/Light ==========*/
 .nav_btns {
 	display: flex;
@@ -137,7 +179,7 @@ img {
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
-	padding: 2rem 0 2rem;
+	padding: 4rem 0 2rem;
 }
 
 .section__title {
@@ -166,7 +208,7 @@ img {
 	gap: 1.1rem;
 }
 
-.header {
+/* .header {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
@@ -174,7 +216,7 @@ img {
 	z-index: var(--z-fixed);
 	background-color: var(--body-color);
 	padding: 1rem 0rem;
-}
+} */
 
 .title {
 	font-size: 1.5rem;
@@ -214,6 +256,11 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+	header {
+		backdrop-filter: blur(4px) saturate(180%);
+		-webkit-backdrop-filter: blur(15px) saturate(180%);
+	}
+
 	.container {
 		width: 85%;
 	}

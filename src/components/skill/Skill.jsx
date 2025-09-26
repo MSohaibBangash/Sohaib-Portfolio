@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import html from "../../assets/images/html.png"
 import CSS from "../../assets/images/css.png"
 import Javascript from "../../assets/images/javascript.png"
@@ -16,13 +17,68 @@ const Skill = () => {
     const [isShowFrontend, setIsShowFrontend] = useState(true)
     const [isShowBackend, setIsShowBackend] = useState(true)
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+
+    const skillBarVariants = {
+        hidden: { width: 0 },
+        visible: {
+            width: "var(--skill-width)",
+            transition: {
+                duration: 1.2,
+                ease: "easeOut",
+                delay: 0.5
+            }
+        }
+    };
+
     useEffect(() => {
     }, [isShowFrontend, isShowBackend])
+    
     return (
         <div className='section container'>
-            <h2 className="title">Skills</h2>
-            <p className="sub-title">My Technical Level</p>
-            <div className="skills_container">
+            <motion.h2 
+                className="title"
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                Skills
+            </motion.h2>
+            <motion.p 
+                className="sub-title"
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.2 }}
+            >
+                My Technical Level
+            </motion.p>
+            <motion.div 
+                className="skills_container"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
 
                 <div className=''>
                     <div className={`skills_content ${isShowFrontend ? "skills_open" : "skills_close"}  `}>
@@ -31,7 +87,7 @@ const Skill = () => {
                             <i className="uil uil-brackets-curly skills_icon"></i>
                             <div>
                                 <h1 className="skills_title">Frontend developer</h1>
-                                <p className="skills_subtitle text-left">Nearly 3 years</p>
+                                <p className="skills_subtitle text-left">More than 3 years</p>
                             </div>
                             <i className="uil uil-angle-down skills_arrow"  ></i>
                         </div>
@@ -54,7 +110,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={CSS} alt="" srcset="" />   
                                     <h3 className="skills_name">CSS</h3>
                                     </div>
-                                    <span className="skills_number">80%</span>
+                                    <span className="skills_number">90%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_css"></span>
@@ -66,7 +122,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={Javascript} alt="" srcset="" />   
                                     <h3 className="skills_name">JavaScript</h3>
                                     </div>
-                                    <span className="skills_number">80%</span>
+                                    <span className="skills_number">90%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_js"></span>
@@ -78,7 +134,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={Typescript} alt="" srcset="" />   
                                     <h3 className="skills_name">Typescript</h3>
                                     </div>
-                                    <span className="skills_number ">70%</span>
+                                    <span className="skills_number ">80%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_typescript"></span>
@@ -90,7 +146,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={ReactIcon} alt="" srcset="" />   
                                     <h3 className="skills_name">React</h3>
                                     </div>
-                                    <span className="skills_number">85%</span>
+                                    <span className="skills_number">90%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_react"></span>
@@ -129,30 +185,19 @@ const Skill = () => {
                             <i className="uil uil-server-network skills_icon"></i>
                             <div>
                                 <h1 className="skills_title">Backend developer</h1>
-                                <p className="skills_subtitle text-left">About 1 year</p>
+                                <p className="skills_subtitle text-left">1 year</p>
                             </div>
                             <i className="uil uil-angle-down skills_arrow"></i>
                         </div>
                         <div className="skills_list grid grid-cols-2 gap-x-12">
-                            <div className="skill_date">
-                                <div className="skills_titles">
-                                    <div className='skills-header'>
-                                     <img className='skills-icon' src={Net} alt="" srcset="" />   
-                                    <h3 className="skills_name">Asp.NET</h3>
-                                    </div>
-                                    <span className="skills_number">40%</span>
-                                </div>
-                                <div className="skills_bar">
-                                    <span className="skills_percentage skills_aspnet"></span>
-                                </div>
-                            </div>
+                            
                             <div className="skill_date">
                                 <div className="skills_titles">
                                     <div className='skills-header'>
                                      <img className='skills-icon' src={Node} alt="" srcset="" />   
                                     <h3 className="skills_name">Node Js</h3>
                                     </div>
-                                    <span className="skills_number">60%</span>
+                                    <span className="skills_number">80%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_node"></span>
@@ -164,7 +209,7 @@ const Skill = () => {
                                      <img className='skills-icon' src={Mongodb} alt="" srcset="" />   
                                     <h3 className="skills_name">MangoDB</h3>
                                     </div>
-                                    <span className="skills_number">45%</span>
+                                    <span className="skills_number">80%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_mongodb"></span>
@@ -176,10 +221,22 @@ const Skill = () => {
                                      <img className='skills-icon' src={SQL} alt="" srcset="" />   
                                     <h3 className="skills_name">SQL</h3>
                                     </div>
-                                    <span className="skills_number">55%</span>
+                                    <span className="skills_number">75%</span>
                                 </div>
                                 <div className="skills_bar">
                                     <span className="skills_percentage skills_sql"></span>
+                                </div>
+                            </div>
+                            <div className="skill_date">
+                                <div className="skills_titles">
+                                    <div className='skills-header'>
+                                     <img className='skills-icon' src={Net} alt="" srcset="" />   
+                                    <h3 className="skills_name">Asp.NET</h3>
+                                    </div>
+                                    <span className="skills_number">50%</span>
+                                </div>
+                                <div className="skills_bar">
+                                    <span className="skills_percentage skills_aspnet"></span>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +245,7 @@ const Skill = () => {
 
 
 
-            </div>
+            </motion.div>
         </div>
     )
 }
