@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import profileImage from "../../assets/images/profile.png"
 import "./about.css"
+
 const About = () => {
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -39,23 +40,23 @@ const About = () => {
 
     return (
         <div className='section container'>
-                <motion.h2
-                    className="title"
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-                    About Me
-                </motion.h2>
-                <motion.p
-                    className="sub-title"
-                    variants={itemVariants}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{ delay: 0.2 }}
-                >
-                    My Introduction
-                </motion.p>
+            <motion.h2
+                className="title"
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                About Me
+            </motion.h2>
+            <motion.p
+                className="sub-title"
+                variants={itemVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: 0.2 }}
+            >
+                    Who I am and what I build
+            </motion.p>
             <motion.div
                 className='about-container'
                 variants={containerVariants}
@@ -66,16 +67,14 @@ const About = () => {
                     className='about-img'
                     variants={imageVariants}
                 >
-                    <svg className="home_blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <rect x="0" y="0" width="200" height="200" rx="20" ry="20" />
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <rect x="0" y="0" width="200" height="200" rx="20" ry="20" />
-                            <image className="home_blob-img" x="-25" y="-100" href={profileImage} />
-                        </g>
-                    </svg>
+                    <div className="about-photo">
+                        <img
+                            src={profileImage}
+                            alt="M. Sohaib Khalid"
+                            width={300}
+                            height={300}
+                        />
+                    </div>
                 </motion.div>
                 <motion.div
                     className='about-content'
@@ -85,13 +84,13 @@ const About = () => {
                         className='about-title'
                         variants={itemVariants}
                     >
-                        Hello! I'm M.Sohaib Khalid
+                        Hello! I&apos;m M. Sohaib Khalid
                     </motion.h5>
                     <motion.p
                         className='about-para'
                         variants={itemVariants}
                     >
-                       Diligent MERN stack developer with a proven track record of nearly 3 years of experience. Experienced in developing, deploying, testing, and troubleshooting web apps, ensuring high performance and seamless user interaction. Passionate about achieving professional development, enhancing my existing skills, and gaining exposure to new technologies
+                        Full Stack Developer with 4+ years of experience building scalable web applications using React.js, Next.js, Node.js, Express.js, TypeScript, MongoDB, and SQL. Experienced in enterprise applications, ERP systems, microservices, REST APIs, authentication, Docker, RabbitMQ, Redis, and third-party integrations, with a strong focus on performance, security, and maintainable solutions.
                     </motion.p>
                     <motion.span
                         className='border-line'
@@ -103,19 +102,23 @@ const About = () => {
                     >
                         <div className="info">
                             <span>Name:</span>
-                            <p>M.Sohaib Khalid</p>
+                            <p>M. Sohaib Khalid</p>
                         </div>
                         <div className="info">
                             <span>Email:</span>
-                            <p><a>sohaibkhalid514@gmail.com</a></p>
+                            <p>
+                                <a href="mailto:sohaibkhalid514@gmail.com">
+                                    sohaibkhalid514@gmail.com
+                                </a>
+                            </p>
                         </div>
                         <div className="info">
                             <span>Location:</span>
                             <p>Islamabad, Pakistan</p>
                         </div>
                         <div className="info">
-                            <span>Availability:</span>
-                            <p>Open for work</p>
+                            <span>Role:</span>
+                            <p>Full Stack Developer</p>
                         </div>
                     </motion.div>
 
@@ -127,10 +130,9 @@ const About = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        Download Cv
+                        Download CV
                         <i className="uil uil-download-alt"></i>
                     </motion.a>
-
                 </motion.div>
             </motion.div>
         </div>

@@ -8,9 +8,10 @@ const Stars = (props) => {
   
   // Generate random positions for stars
   const [sphere] = useState(() => {
-    const positions = new Float32Array(3000 * 3);
-    for (let i = 0; i < 3000; i++) {
-      const radius = 1.2;
+    const count = 900;
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      const radius = 1.5 + Math.random() * 2.5;
       const u = Math.random();
       const v = Math.random();
       const theta = 2 * Math.PI * u;
@@ -29,8 +30,8 @@ const Stars = (props) => {
 
   useFrame((state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 40;
-      ref.current.rotation.y -= delta / 50;
+      ref.current.rotation.x -= delta / 100;
+      ref.current.rotation.y -= delta / 130;
     }
   });
 
@@ -40,10 +41,10 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color='#ffffff'
-          size={0.008}
+          size={0.016}
           sizeAttenuation={true}
           depthWrite={false}
-          opacity={0.9}
+          opacity={0.85}
         />
       </Points>
     </group>

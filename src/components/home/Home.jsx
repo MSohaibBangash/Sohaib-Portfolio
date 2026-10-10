@@ -3,8 +3,9 @@ import Typewriter from "typewriter-effect";
 import { motion } from 'framer-motion'
 import './home.css'
 import { Link } from 'react-router-dom';
+
 const Home = () => {
-    const waUrl = `https://wa.me/${923430669213}?text=${'Hi! I saw your site and would like to chat.'}`;
+    const waUrl = `https://wa.me/923430669213?text=${encodeURIComponent('Hi! I saw your site and would like to chat.')}`;
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -28,106 +29,96 @@ const Home = () => {
         }
     };
 
-    return (
+    const socialLinks = (
         <>
-            <section className='section container' >
-                <motion.div 
-                    className='home_container'
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="visible"
-                >
-
-                    <motion.div 
-                        className="home_social"
-                        variants={itemVariants}
-                    >
-                        <a href="https://www.linkedin.com/in/m-sohaib-khalid-102b38228/" target="_blank" className="home_social-icon icon">
-                            <i className="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href={waUrl} target="_blank" className="home_social-icon icon">
-                            <i className="uil uil-whatsapp"></i>
-                        </a>
-                        <a href="https://github.com/MSohaibBangash/" target="_blank" className="home_social-icon icon">
-                            <i className="uil uil-github"></i>
-                        </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sohaibkhalid514@gmail.com.com" target="_blank" className="home_social-icon icon">
-                            <i className="uil uil-envelope"></i>
-                        </a>
-                    </motion.div>
-                    <motion.div 
-                        className='home_data'
-                        variants={itemVariants}
-                    >
-                        <motion.h1 
-                            className='home_title'
-                            variants={itemVariants}
-                        >
-                            Hi, I'am M.Sohaib
-                        </motion.h1>
-                        <motion.p 
-                            className='home_subtitle'
-                            variants={itemVariants}
-                        >
-                            <Typewriter
-                                className=""
-                                onInit={(typewriter) => {
-                                    typewriter
-                                        .changeDelay(80)
-                                        .typeString("I'm a MERN Stack Developer")
-                                        .pauseFor(1500)
-                                        .deleteAll()
-                                        .typeString("Code. ")
-                                        .pauseFor(500)
-                                        .typeString("Create. ")
-                                        .pauseFor(500)
-                                        .typeString("Innovate.")
-                                        .pauseFor(1500)
-                                        .start();
-                                }}
-                                options={{
-                                    loop: true
-                                }}
-                            />
-                        </motion.p>
-                        <motion.div variants={itemVariants}>
-                            <Link to={"/contact"} className="button">Contact Me
-                                <i className="uil uil-message"></i>
-                            </Link>
-                        </motion.div>
-                    </motion.div>
-
-                </motion.div>
-
-                {/* <div className='home_scroll flex justify-center mt-16 md:mt-20'>
-                    <a href="#about" className="home_scroll-button">
-                        <i className="uil uil-mouse-alt home_social-icon"></i>
-                        <span>Scroll Down</span>
-                        <i className="uil uil-arrow-down home_social-icon"></i>
-                    </a>
-                </div> */}
-
-                <motion.div 
-                    className="home_social_2"
-                    variants={itemVariants}
-                >
-                    <a href="https://www.linkedin.com/in/m-sohaib-khalid-102b38228/" target="_blank" className="home_social-icon icon">
-                        <i className="uil uil-linkedin-alt"></i>
-                    </a>
-                    <a href={waUrl} target="_blank" className="home_social-icon icon">
-                        <i className="uil uil-whatsapp"></i>
-                    </a>
-                    <a href="https://github.com/MSohaibBangash/" target="_blank" className="home_social-icon icon">
-                        <i className="uil uil-github"></i>
-                    </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sohaibkhalid514@gmail.com.com" target="_blank" className="home_social-icon icon">
-                        <i className="uil uil-envelope"></i>
-                    </a>
-                </motion.div>
-
-
-            </section>
+            <a
+                href="https://www.linkedin.com/in/m-sohaib-khalid-102b38228/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home_social-icon icon"
+                aria-label="LinkedIn"
+            >
+                <i className="uil uil-linkedin-alt"></i>
+            </a>
+            <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home_social-icon icon"
+                aria-label="WhatsApp"
+            >
+                <i className="uil uil-whatsapp"></i>
+            </a>
+            <a
+                href="https://github.com/MSohaibBangash/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home_social-icon icon"
+                aria-label="GitHub"
+            >
+                <i className="uil uil-github"></i>
+            </a>
+            <a
+                href="mailto:sohaibkhalid514@gmail.com"
+                className="home_social-icon icon"
+                aria-label="Email"
+            >
+                <i className="uil uil-envelope"></i>
+            </a>
         </>
+    );
+
+    return (
+        <section className='section container'>
+            <motion.div
+                className='home_container'
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.div className="home_social" variants={itemVariants}>
+                    {socialLinks}
+                </motion.div>
+
+                <motion.div className='home_data' variants={itemVariants}>
+                    <motion.h1 className='home_title' variants={itemVariants}>
+                        <span className="home_title__greeting">Hi,</span>
+                        <span className="home_title__name">I&apos;m M. Sohaib Khalid</span>
+                    </motion.h1>
+                    <motion.p className='home_caption' variants={itemVariants}>
+                        Full Stack Developer building scalable, secure enterprise web applications
+                    </motion.p>
+                    <motion.p className='home_subtitle' variants={itemVariants}>
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .changeDelay(80)
+                                    .typeString("React.js · Angular · Node.js")
+                                    .pauseFor(1500)
+                                    .deleteAll()
+                                    .typeString("Next.js · Express.js · TypeScript")
+                                    .pauseFor(1500)
+                                    .deleteAll()
+                                    .typeString("MongoDB · SQL · Docker")
+                                    .pauseFor(1500)
+                                    .start();
+                            }}
+                            options={{ loop: true }}
+                        />
+                    </motion.p>
+                    <motion.div variants={itemVariants}>
+                        <Link to={"/contact"} className="button">
+                            Contact Me
+                            <i className="uil uil-message"></i>
+                        </Link>
+                    </motion.div>
+                </motion.div>
+            </motion.div>
+
+            <motion.div className="home_social_2" variants={itemVariants}>
+                {socialLinks}
+            </motion.div>
+        </section>
     )
 }
 

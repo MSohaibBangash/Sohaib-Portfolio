@@ -52,11 +52,11 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
-  // Initialize dark theme on app load
+  // Initialize light theme on app load
   useEffect(() => {
-    document.body.classList.add("dark-theme");
+    document.body.classList.remove("dark-theme");
   }, []);
 
   const handleToggleTheme = () => {

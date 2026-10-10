@@ -40,11 +40,27 @@
 
 .home_title {
 	font-size: 2.4rem;
+	text-align: center;
+	line-height: 1.15;
+}
+
+.home_title__greeting,
+.home_title__name {
+	display: block;
+}
+
+.home_caption {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-top: 0.75rem;
+	max-width: 32rem;
+	color: var(--text-color);
+	text-align: center;
 }
 
 .home_subtitle {
-	font-size: 1.5rem;
-	margin-top: 1.25rem;
+	font-size: 1.25rem;
+	margin-top: 0.75rem;
 }
 
 .home_scroll {
@@ -80,10 +96,24 @@
 		font-size: 3.75rem;
 		line-height: 1;
 	}
+
+	.home_title__greeting,
+	.home_title__name {
+		display: inline;
+	}
+
+	.home_title__greeting::after {
+		content: ' ';
+	}
+	.home_caption {
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		margin-top: 1rem;
+	}
 	.home_subtitle {
-		font-size: 1.875rem;
-		line-height: 2.25rem;
-		margin-top: 2.5rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin-top: 1rem;
 	}
 }
 
@@ -92,9 +122,13 @@
 		font-size: 4.5rem;
 		line-height: 1;
 	}
+	.home_caption {
+		font-size: 1.25rem;
+		line-height: 1.875rem;
+	}
 	.home_subtitle {
-		font-size: 2.25rem;
-		line-height: 2.5rem;
+		font-size: 1.75rem;
+		line-height: 2.25rem;
 	}
 	.home_scroll {
 		margin-top: 5rem;

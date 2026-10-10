@@ -18,7 +18,7 @@
 }
 .contact_subtitle {
 	font-size: var(--small-font-size);
-	color: var(--text-color-light);
+	color: var(--text-color);
 }
 .contact_content {
 	background-color: var(--input-color);

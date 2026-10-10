@@ -37,28 +37,28 @@ const Contact = () => {
     return (
         <section className="section container">
             <h2 className="title">Contact Me</h2>
-            <p className="sub-title">Get in Touch</p>
+            <p className="sub-title">Have a role or project in mind? Let&apos;s talk</p>
             <div className="contact_container">
                 <div>
                     <div className="contact_information">
                         <i className="uil uil-phone contact_icon"></i>
                         <div>
                             <h3 className="contact_title">Call Me</h3>
-                            <span className="section__subtitle">0343 0669213</span>
+                            <a className="section__subtitle" href="tel:+923430669213">0343-0669213</a>
                         </div>
                     </div>
                     <div className="contact_information">
                         <i className="uil uil-envelope contact_icon"></i>
                         <div>
                             <h3 className="contact_title">Email</h3>
-                            <span className="section__subtitle">sohaibkhalid514@gmail.com</span>
+                            <a className="section__subtitle" href="mailto:sohaibkhalid514@gmail.com">sohaibkhalid514@gmail.com</a>
                         </div>
                     </div>
                     <div className="contact_information">
                         <i className="uil uil-map-marker contact_icon"></i>
                         <div>
                             <h3 className="contact_title">Location</h3>
-                            <span className="section__subtitle">Islamabad - Pakistan</span>
+                            <span className="section__subtitle">Near G10 Markaz, Islamabad, Pakistan</span>
                         </div>
                     </div>
                 </div>
