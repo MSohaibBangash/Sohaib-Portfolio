@@ -26,13 +26,13 @@ const projects = [
         title: "Trade-Based Money Laundering",
         client: "JS Bank",
         description:
-            "Monitors and helps prevent illegal financial activities that occur within international trade transactions.",
+            "Trade-Based Money Laundering (TBML) is an application designed to monitor and prevent illegal financial activities that occur within international trade transactions.",
         image: TBML,
         objectClass: "object_center",
     },
     {
         title: "Emformance",
-        client: "USA-based client",
+        client: "USA based client",
         description:
             "Developed an ERP application that integrates core business processes, including HR, finance, operations, workflow management, and reporting into a centralized platform.",
         image: Emformance,
@@ -40,17 +40,17 @@ const projects = [
     },
     {
         title: "Warehouse Management System",
-        client: "Finland-based client",
+        client: "Finland based client",
         description:
-            "Automates inventory check-in/checkout and asset tracking with detailed warehouse reports.",
+            "A Warehouse Management System (WMS) is an application that automates check-in and checkout inventory and asset tracking with detailed warehouse reports.",
         image: WMS,
         objectClass: "object_left",
     },
     {
         title: "EZTECH",
-        client: "Saudi Arabia-based client",
+        client: "Saudi Arabia based client",
         description:
-            "Desktop support and end-to-end IT support services platform for smooth, reliable technology operations.",
+            "Eztech is an advanced application that offers comprehensive Desktop Support and end-to-end IT Support Services, ensuring smooth, reliable, and efficient technology operations.",
         image: Eztech,
         objectClass: "object_center",
     },
@@ -58,7 +58,7 @@ const projects = [
         title: "CDA Survey Portal",
         client: "Capital Development Authority",
         description:
-            "Platform where employees are assigned areas to conduct and submit structured field survey reports efficiently.",
+            "CDA Survey is a platform where employees are assigned specific areas to conduct and submit structured field survey reports efficiently.",
         image: CDA,
         objectClass: "object_center",
     },

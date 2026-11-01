@@ -90,7 +90,7 @@ const About = () => {
                         className='about-para'
                         variants={itemVariants}
                     >
-                        Full Stack Developer with 4+ years of experience building scalable web applications using React.js, Next.js, Node.js, Express.js, TypeScript, MongoDB, and SQL. Experienced in enterprise applications, ERP systems, microservices, REST APIs, authentication, Docker, RabbitMQ, Redis, and third-party integrations, with a strong focus on performance, security, and maintainable solutions.
+                        Full Stack Developer with 4+ years of experience building scalable web applications using React.js, Next.js, Node.js, Express.js, TypeScript, MongoDB, and SQL. Experienced in enterprise applications, ERP systems, Microservices, REST APIs, authentication, Docker, RabbitMQ, Redis, and third-party integrations, with a strong focus on performance, security, and maintainable solutions. Leverages AI-assisted development tools to accelerate delivery while maintaining code quality, reliability, and production standards.
                     </motion.p>
                     <motion.span
                         className='border-line'
